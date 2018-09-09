@@ -8,5 +8,5 @@ import com.example.stxr.mpchartdemo.mylib.BaseFragment
  * description:
  */
 class LauncherActivity : BaseActivity() {
-    override fun createFragment() = LaunchDelegate()
+    override fun createFragment() = LaunchDelegate.newInstance()
 }

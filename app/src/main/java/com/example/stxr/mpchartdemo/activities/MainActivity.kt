@@ -4,8 +4,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.stxr.mpchartdemo.R
-import com.example.stxr.mpchartdemo.chart.LinearChartActivity
-import com.example.stxr.mpchartdemo.chart.ProgressBarActivity
+import com.example.stxr.mpchartdemo.chart.LinearChartDelegate
+import com.example.stxr.mpchartdemo.chart.ProgressBarDelegate
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,9 +17,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClick() {
-        btnLineChart.setOnClickListener { startActivity(Intent(this, LinearChartActivity::class.java)) }
-        btnProgressBar.setOnClickListener { startActivity(Intent(this, ProgressBarActivity::class.java)) }
-        btnMVVM.setOnClickListener { startActivity(Intent(this, ProgressBarActivity::class.java)) }
+        btnLineChart.setOnClickListener { startActivity(Intent(this, LinearChartDelegate::class.java)) }
+        btnProgressBar.setOnClickListener { startActivity(Intent(this, ProgressBarDelegate::class.java)) }
+        btnMVVM.setOnClickListener { startActivity(Intent(this, ProgressBarDelegate::class.java)) }
     }
 
 }

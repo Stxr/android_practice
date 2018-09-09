@@ -1,10 +1,12 @@
 package com.example.stxr.mpchartdemo.chart
 
+import android.databinding.DataBindingUtil.setContentView
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.stxr.mpchartdemo.R
 import com.example.stxr.mpchartdemo.R.id.lineChart
 import com.example.stxr.mpchartdemo.Utils.log
+import com.example.stxr.mpchartdemo.mylib.BaseFragment
 import com.github.mikephil.charting.components.*
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -15,10 +17,10 @@ import kotlinx.android.synthetic.main.activity_chart_line.*
 /**
  *
  */
-class LinearChartActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chart_line)
+class LinearChartDelegate : BaseFragment() {
+    override fun layout()=R.layout.activity_chart_line
+
+    override fun initView() {
         setData(18,0f,10f)
         //view要在设置数据之后设置才有效
         setView()

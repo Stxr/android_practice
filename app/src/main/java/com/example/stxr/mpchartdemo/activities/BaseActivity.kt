@@ -15,8 +15,9 @@ abstract class BaseActivity: SingleFragmentActivity(){
     abstract fun createFragment():BaseFragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val layout = FrameLayout(this)
-        layout.id = R.id.root_fragment
-        loadRootFragment(layout.id,createFragment())
+//        val layout = FrameLayout(this)
+//        layout.id = R.id.root_fragment
+        setContentView(R.layout.activity_single_fragment)
+        loadRootFragment(R.id.fragment_container,createFragment())
     }
 }
